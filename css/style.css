@@ -1,0 +1,219 @@
+.bg-grid-pattern {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23e5e7eb'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+.gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.card-rotate:hover {
+    transform: rotateY(15deg);
+}
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+.card-hover {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(1, 67, 57, 0.1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(1, 67, 57, 0.1), 0 10px 10px -5px rgba(1, 67, 57, 0.04);
+}
+
+.popular-card {
+    position: relative;
+    background: linear-gradient(135deg, #014339 0%, #02604d 100%);
+    color: white;
+    border: none;
+}
+
+.popular-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #f59e0b 0%, #fcd34d 100%);
+}
+
+.popular-card .feature-item {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.popular-card .buy-button {
+    background-color: white;
+    color: #014339;
+    font-weight: 600;
+}
+
+.popular-card .buy-button:hover {
+    background-color: #f8fafc;
+    transform: translateY(-2px);
+}
+
+.card-gradient-1 {
+    background: white;
+}
+
+.card-gradient-2 {
+    background: white;
+}
+
+.card-gradient-3 {
+    background: white;
+}
+
+.btn-primary {
+    background-color: #014339;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    background-color: #012b23;
+    transform: translateY(-2px);
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.btn-primary:hover::after {
+    transform: translateX(100%);
+}
+
+.price-tag {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #f0fdf4;
+    color: #014339;
+    border-radius: 9999px;
+    font-weight: 600;
+}
+
+.price-tag::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 2px dashed rgba(1, 67, 57, 0.2);
+    border-radius: 9999px;
+    pointer-events: none;
+}
+
+.feature-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.ribbon {
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    background-color: #f59e0b;
+    color: #012b23;
+    padding: 0.25rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: rotate(45deg);
+    transform-origin: left top;
+    z-index: 1;
+}
+
+.ribbon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    border-width: 10px 10px 0 0;
+    border-style: solid;
+    border-color: transparent #c27803 transparent transparent;
+}
+
+.ribbon::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    border-width: 0 0 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #c27803;
+}
+.accordion-content {
+    --accordion-height: 0;
+    overflow: hidden;
+}
+
+.accordion-open {
+    animation: accordion-open 0.3s ease-out forwards;
+}
+
+.accordion-close {
+    animation: accordion-close 0.3s ease-out forwards;
+}
+
+.faq-item {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(14, 165, 233, 0.1);
+}
+
+.faq-item:hover {
+    background-color: rgba(14, 165, 233, 0.02);
+}
+
+.faq-item.active {
+    background-color: rgba(14, 165, 233, 0.05);
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.transition-transform {
+    transition: transform 0.3s ease;
+}
+
+body.bg-gray-900 {
+    background-color: #1a202c; /* Dark background */
+    color: #f7fafc; /* Light text */
+}
+
+/* Additional styles for dark mode can be added here */
+
+select {
+    display: flex;
+    align-items: center;
+}
+
+select img {
+    margin-right: 8px; /* Space between flag and text */
+}
+ 

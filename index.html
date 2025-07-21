@@ -1,209 +1,1553 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <title>...</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" >
-    <style>
-      pre {
-        background: #ccc;
-        padding: 30px;
-        border-radius: 20px;
-        font-weight: bold;
-      }
-      .toc-list a {
-        color: black;
-      }
-      .toc-list-item {
-        margin: 5px 0;
-      }
-      /* Style the expand/collapse icon */
-      .toc-list-item .toc-expand {
-        cursor: pointer;
-        padding: 5px;
-      }
-      /* Collapsing behavior */
-      .toc-list-item ul {
-        display: none;
-        padding-left: 20px;
-      }
-      .toc-list-item.open > ul {
-        display: block;
-      }
-      /* Icon for expanded or collapsed state */
-      .toc-list-item.open > .toc-expand::before {
-        content: "▼"; /* Down triangle */
-      }
-      .toc-list-item:not(.open) > .toc-expand::before {
-        content: "▶"; /* Right triangle */
-      }
-      .back-to-top a {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #333;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        text-decoration: none;
-        font-weight: bold;
-      }
-      .about-documentation {
-        font-style: italic;
-      }
-    </style>
-  </head>
-  <body>
-    <header class="mb-5">
-      <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand put-title-here">...</a>
-        </div>
-      </div>
-    </header>
-    <main role="main">
-      <section style="display:none;" class="unhide-if-errors mb-5">
-        <div class="container">
-          <div class="alert alert-danger put-errors-here" role="alert">
-          </div>
-        </div>
-      </section>
-      <section class="mb-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm col-lg-3">
-              <div class="back-to-top">
-                <a href="#">Back to top</a>
-              </div>
-              <div class="put-table-of-contents-here"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title title="home page lipax">Lipax Panafrican| Send money to Africa, Asia ,latin America, Global Payment Solutions
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Lipax - Découvrez les solutions de paiements sans contact les plus innovantes en Afrique. Facilitez vos transactions avec nos technologies avancées pour des paiements rapides et sécurisés.">
+    <meta name="keywords"
+        content="Paiements sans contact, innovations, LIPA, lipaxe, lipax Afrique, technologies de paiement, solutions de paiement, transactions sécurisées, LiPa">
+    <meta name="author" content="Lipax - Solutions de paiement innovantes">
+    <meta name="author" content="Lipax - Prince muloko: Founder & DG">
+    <meta name="author" content="Lipax - Rodrigue Iragi: Co-founder & CTO">
+    <meta name="msvalidate.01" content="15634D35F4A22AA0FC66BE47AB1E8475" />
+
+    <link rel="canonical" href="https://www.lipaxe.com">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Carte de Crédit Virtuelle et Paiement Sans Contact - Lipax">
+    <meta property="og:description"
+        content="Découvrez Lipax, la solution innovante pour vos paiements sans contact, transferts d'argent, et transactions en ligne sécurisées.">
+    <meta property="og:image" content="https://www.lipaxe.com/img/android-chrome-512x512.png">
+    <meta property="og:url" content="https://www.lipaxe.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Carte de Crédit Virtuelle et Paiement Sans Contact - LiPa">
+    <meta name="twitter:description"
+        content="Découvrez Lipax, la solution innovante pour vos paiements sans contact, transferts d'argent, et transactions en ligne sécurisées.">
+    <meta name="twitter:image" content="https://www.lipaxe.com/img/android-chrome-512x512.png">
+    <meta name="twitter:site" content="@lipaxe">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://www.lipaxe.com/img/lipax1.jpg" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.lipaxe.com/img/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.lipaxe.com/img/android-chrome-192x192.png">
+
+    <!-- Other meta tags, title, and links -->
+    <link rel="icon" href="img/lipax1.jpg" type="image/x-icon">
+    <!-- Alternative favicon for different formats -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/android-chrome-192x192.png">
+
+    <meta property="og:title" content="Lipax - Innovations de paiements sans contact en Afrique">
+    <meta property="og:description"
+        content="Découvrez les solutions de paiements sans contact les plus innovantes en Afrique avec LiPa. Simplifiez vos transactions grâce à des technologies avancées.">
+    <meta property="og:image" content="img/lipax1.jpg">
+    <meta property="og:url" content="https://www.lipaxe.com">
+    <meta property="og:type" content="lipaxe">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jscode.js"></script>
+    <script src="js/lang.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-sans antialiased text-gray-800 ">
+    <!-- Navigation -->
+    <div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 ">
+        <nav class="sticky top-0 z-50 bg-white shadow backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo -->
+                    <a href="/" class="flex-shrink-0">
+                        <img src="/img/bgree.png" alt="Logo" class="h-10 w-auto">
+                    </a>
+
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex space-x-8">
+                        <a href="/" class="text-[#014339] font-medium hover:text-[#014339]/80 transition">Solutions</a>
+                        <a href="lipaxTeams.html" class="text-gray-600 hover:text-[#014339] transition">Join Our
+                            Team</a>
+                        <a href="aboutX.html" class="text-gray-600 hover:text-[#014339] transition">About Us</a>
+                        <a href="contact.html" class="text-gray-600 hover:text-[#014339] transition">Contact Us</a>
+                    </div>
+
+                    <!-- Right buttons -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <!-- Language Switcher -->
+                        <div class="relative">
+                            <button id="language-btn"
+                                class="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded bg-white shadow hover:bg-gray-50 w-full">
+                                <img src="https://flagcdn.com/w40/gb.png" alt="EN" class="w-5 h-5" id="language-flag" />
+                                <span id="language-name"></span>
+                                <svg class="ml-auto w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+
+                            <ul id="language-menu"
+                                class="absolute left-0 right-0 mt-2 bg-white border border-gray-200 rounded shadow-lg hidden z-10">
+                                <!-- <li data-lang="fr" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <img src="https://flagcdn.com/w40/fr.png" class="w-5 h-5" />
+                                    Français
+                                </li> -->
+                                <li data-lang="en"
+                                    class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <img src="https://flagcdn.com/w40/gb.png" class="w-5 h-5" />
+                                    English
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="https://apps.lipaxe.com/auth/login"
+                            class="text-[#014339] font-medium hover:text-[#014339]/80 border-2 border-[#014339] px-4 py-2 rounded-lg hover:bg-[#014339]/10 transition">
+                            Login
+                        </a>
+                        <a href="https://apps.lipaxe.com/auth/login"
+                            class="bg-[#014339] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#014339]/90 transition">
+                            Get Started
+                        </a>
+                    </div>
+
+                    <div class="md:hidden flex justify-center items-center">
+                        <a href="https://apps.lipaxe.com/auth/login"
+                            class="text-[#014339] mr-4 font-medium hover:text-[#014339]/80 border-2 border-[#014339] px-4 py-2 rounded-lg hover:bg-[#014339]/10 transition">
+                            Login
+                        </a>
+
+                        <button id="mobile-menu-toggle" class="ml-4 text-gray-700 focus:outline-none">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm col-lg-9">
-              <div class="put-content-here"></div>
-              <div class="about-documentation">
-                Documentation layout was created using <a href="https://documentation.dcycle.com">Dcycle Documentation</a> from a README.md file.
-              </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-3">
+                <a href="/" class="block text-[#014339] font-medium hover:text-[#014339]/80 transition">Solutions</a>
+                <a href="lipaxTeams.html" class="block text-gray-600 hover:text-[#014339] transition">Join Our Team</a>
+                <a href="aboutX.html" class="block text-gray-600 hover:text-[#014339] transition">About Us</a>
+                <a href="contact.html" class="block text-gray-600 hover:text-[#014339] transition">Contact Us</a>
+
+                <a href="https://apps.lipaxe.com/auth/login"
+                    class="block bg-[#014339] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#014339]/90 transition">
+                    Get Started
+                </a>
+
+                <!-- Language Switcher -->
+                <div class="relative">
+                    <button id="language-btn"
+                        class="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded bg-white shadow hover:bg-gray-50 w-full">
+                        <img src="https://flagcdn.com/w40/gb.png" alt="EN" class="w-5 h-5" id="language-flag" />
+                        <span id="language-name"></span>
+                        <svg class="ml-auto w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+
+                    <ul id="language-menu"
+                        class="absolute left-0 right-0 mt-2 bg-white border border-gray-200 rounded shadow-lg hidden z-10">
+                        <li data-lang="fr" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <img src="https://flagcdn.com/w40/fr.png" class="w-5 h-5" />
+                            Français
+                        </li>
+                        <li data-lang="en" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <img src="https://flagcdn.com/w40/gb.png" class="w-5 h-5" />
+                            English
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
+        </nav>
+
+
+        <!-- Hero Section -->
+        <div class="relative w-full overflow-hidden bg-white -mt-10" id="carousel">
+
+            <!-- EFFET MOTION -->
+
+            <!-- Slides wrapper -->
+            <div id="carousel-inner" class="flex transition-transform duration-1000 ease-[cubic-bezier(0.4,0,0.2,1)]"
+                style="transform: translateX(0%)">
+
+                <!-- Slide 1: Contactless Payment -->
+                <div class="min-w-full flex flex-col md:flex-row items-center px-6 md:px-20 py-16 gap-8">
+                    <div class="md:w-1/2 space-y-4 text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#014339] animate-fade-in">Contactless Payment
+                        </h2>
+                        <p class="text-gray-600 animate-fade-in delay-200">
+                            Make secure, tap-to-pay transactions instantly with Lipax. Go fully digital with zero
+                            friction.
+                        </p>
+                        <div class="hidden sm:flex flex-wrap gap-4">
+                            <a href="https://play.google.com/store/apps/details?id=com.crespoprince.lipaMobileApp"
+                                class="bg-[#014339] text-white px-8 py-3 md:py-4 rounded-xl flex items-center text-lg font-medium hover:bg-[#014339]/90 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                Download App<i class="fas fa-download ml-2"></i>
+                            </a>
+                            <a href="https://apps.lipaxe.com/auth/register"
+                                class="bg-white text-gray-800 px-8 py-3 md:py-4 rounded-xl text-lg font-medium hover:bg-gray-50 transition-all border border-gray-200 shadow hover:shadow-md">
+                                Get Started <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="/img/newC1.png" alt="Contactless" class="rounded-lg w-full animate-zoom-in">
+                    </div>
+                </div>
+
+                <!-- Slide 2: Virtual Card Secured 3D -->
+                <div class="min-w-full flex flex-col md:flex-row items-center px-6 md:px-20 py-16 gap-8">
+                    <div class="md:w-1/2 space-y-4 text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#014339] animate-fade-in">Virtual Card Secured
+                            3D</h2>
+                        <p class="text-gray-600 animate-fade-in delay-200">
+                            Generate virtual cards for each transaction and benefit from 3D-Secure protection and
+                            control.
+                        </p>
+                        <div class="hidden sm:flex flex-wrap gap-4">
+                            <a href="https://play.google.com/store/apps/details?id=com.crespoprince.lipaMobileApp"
+                                class="bg-[#014339] text-white px-8 py-3 md:py-4 rounded-xl flex items-center text-lg font-medium hover:bg-[#014339]/90 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                Download App<i class="fas fa-download ml-2"></i>
+                            </a>
+                            <a href="https://apps.lipaxe.com/auth/register"
+                                class="bg-white text-gray-800 px-8 py-3 md:py-4 rounded-xl text-lg font-medium hover:bg-gray-50 transition-all border border-gray-200 shadow hover:shadow-md">
+                                Get Started <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="/img/newC4.png" alt="Virtual Card" class="rounded-lg w-full animate-zoom-in">
+                    </div>
+                </div>
+
+                <!-- Slide 3: Payment with Cryptocurrencies -->
+                <div class="min-w-full flex flex-col md:flex-row items-center px-6 md:px-20 py-16 gap-8">
+                    <div class="md:w-1/2 space-y-4 text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#014339] animate-fade-in">Payment with
+                            Cryptocurrencies</h2>
+                        <p class="text-gray-600 animate-fade-in delay-200">
+                            Accept and send payments in Bitcoin, USDT and more. Lipax bridges fiat and crypto,
+                            seamlessly.
+                        </p>
+                        <div class="hidden sm:flex flex-wrap gap-4">
+                            <a href="https://play.google.com/store/apps/details?id=com.crespoprince.lipaMobileApp"
+                                class="bg-[#014339] text-white px-8 py-3 md:py-4 rounded-xl flex items-center text-lg font-medium hover:bg-[#014339]/90 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                Download App<i class="fas fa-download ml-2"></i>
+                            </a>
+                            <a href="https://apps.lipaxe.com/auth/register"
+                                class="bg-white text-gray-800 px-8 py-3 md:py-4 rounded-xl text-lg font-medium hover:bg-gray-50 transition-all border border-gray-200 shadow hover:shadow-md">
+                                Get Started <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="/img/newC2.png" alt="Crypto Paiement with lipax"
+                            class="rounded-lg w-full  animate-zoom-in">
+                    </div>
+                </div>
+
+                <!-- Slide 4: Transfert Instantly with Link, QR Code -->
+                <div class="min-w-full flex flex-col md:flex-row items-center px-6 md:px-20 py-16 gap-8">
+                    <div class="md:w-1/2 space-y-4 text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#014339] animate-fade-in">Transfert Instantly
+                            with Link & QR Code</h2>
+                        <p class="text-gray-600 animate-fade-in delay-200">
+                            Send money via link or QR code instantly. Transparency, zero waiting, maximum convenience.
+                        </p>
+                        <div class="hidden sm:flex flex-wrap gap-4">
+                            <a href="https://play.google.com/store/apps/details?id=com.crespoprince.lipaMobileApp"
+                                class="bg-[#014339] text-white px-8 py-3 md:py-4 rounded-xl flex items-center text-lg font-medium hover:bg-[#014339]/90 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                Download App<i class="fas fa-download ml-2"></i>
+                            </a>
+                            <a href="https://apps.lipaxe.com/auth/register"
+                                class="bg-white text-gray-800 px-8 py-3 md:py-4 rounded-xl text-lg font-medium hover:bg-gray-50 transition-all border border-gray-200 shadow hover:shadow-md">
+                                Get Started <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="/img/newC.png" alt="QR Code, Link from lipax"
+                            class="rounded-lg w-full animate-zoom-in">
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </section>
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.4/marked.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.30.0/tocbot.min.js"></script>
-    <script>
-      class MyDocumentation {
-        static async init() {
-          const instance = this.instance();
-          try {
-            instance.preflight();
-            const markdown = await instance.readReadme();
-            const renderer = new marked.Renderer();
-            renderer.heading = function(text, level) {
-              const id = text.text.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-');
-              return `<h${text.depth} id="${id}">${text.text}</h${text.depth}>`;
+
+        <canvas id="motionCanvas" class="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
+
+
+
+
+        <style>
+            .animate-fade-in {
+                animation: fadeIn 1s ease forwards;
+                opacity: 0;
             }
-            marked.setOptions({renderer});
-            const html = marked.parse(markdown);
-            instance.placeHtml(html);
-            instance.createTableOfContents();
-            instance.setTitle();
-          }
-          catch (error) {
-            instance.showError(error);
-          }
-        }
-        getTitleFromMarkup() {
-          const candidate = document.querySelector('h1');
-          const candidateText = candidate ? candidate.textContent : null;
-          if (candidateText) {
-            return candidateText;
-          }
-          return 'Documentation';
-        }
-        setTitle() {
-          const title = this.getTitleFromMarkup();
-          document.querySelector('.put-title-here').textContent = title;
-          document.title = title;
-        }
-        createTableOfContents() {
-          // See https://tscanlin.github.io/tocbot/#options
-          tocbot.init({
-            // Where to render the table of contents.
-            tocSelector: '.put-table-of-contents-here',
-            // Where to grab the headings to build the table of contents.
-            contentSelector: '.put-content-here',
-            // Which headings to grab inside of the contentSelector element.
-            headingSelector: 'h2, h3, h4, h5, h6',
-            // For headings inside relative or absolute positioned containers within content.
-            hasInnerContainers: true,
-            orderedList: false,
-          });
 
-          // Script to handle TOC fold/unfold
-          document.querySelectorAll('.toc-list-item').forEach(function(item) {
-              // Check if there is a nested list (sub TOC)
-              if (item.querySelector('ul')) {
-                  const expandIcon = document.createElement('span');
-                  expandIcon.classList.add('toc-expand');
-                  item.prepend(expandIcon);
+            .animate-fade-in.delay-200 {
+                animation-delay: 0.2s;
+            }
 
-                  // Initially collapse nested lists
-                  item.classList.remove('open');
+            .animate-fade-in.delay-300 {
+                animation-delay: 0.3s;
+            }
 
-                  // Add click event to toggle nested lists
-                  expandIcon.addEventListener('click', function() {
-                      item.classList.toggle('open');
-                  });
-              }
-          });
+            .animate-zoom-in {
+                animation: zoomIn 1s ease forwards;
+                opacity: 0;
+            }
 
-          // Smooth scrolling for the TOC links
-          document.querySelectorAll('.toc-link').forEach(function(link) {
-              link.addEventListener('click', function(e) {
-                  e.preventDefault();
-                  const target = document.querySelector(link.getAttribute('href'));
-                  window.scrollTo({
-                      top: target.offsetTop,
-                      behavior: 'smooth'
-                  });
-              });
-          });
-        }
-        placeHtml(html) {
-          var new_elem = document.createElement('div');
-          new_elem.innerHTML = html;
-          document.querySelector('.put-content-here').appendChild(new_elem);
-        }
-        preflight() {
-          if (location.protocol == 'file:') {
-            throw ('Cannot read README.md file from file:// protocol. You might want to try: python3 -m http.server; see https://documentation.dcycle.com for more details.');
-          }
-        }
-        async readReadme(callback) {
-          const response = await fetch('./README.md');
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
 
-          if (!response.ok) {
-            throw ('Could not read README.md file, make sure it exists');
-          }
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+            }
 
-          return response.text();
+            @keyframes zoomIn {
+                from {
+                    opacity: 0;
+                    transform: scale(0.95);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+
+
+            @keyframes moveBg {
+                0% {
+                    transform: translate(-25%, -25%) scale(1);
+                }
+
+                50% {
+                    transform: translate(0%, 0%) scale(1.2);
+                }
+
+                100% {
+                    transform: translate(-25%, -25%) scale(1);
+                }
+            }
+
+            #carousel>#carousel-inner>div {
+                position: relative;
+                z-index: 1;
+            }
+        </style>
+        <script>
+            const carouselInner = document.getElementById("carousel-inner");
+            const slides = carouselInner.children;
+            let index = 0;
+
+            function updateSlide() {
+                carouselInner.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            function nextSlide() {
+                index = (index + 1) % slides.length;
+                updateSlide();
+            }
+
+            function prevSlide() {
+                index = (index - 1 + slides.length) % slides.length;
+                updateSlide();
+            }
+
+            // Auto slide
+            setInterval(() => {
+                nextSlide();
+            }, 9000);
+
+
+
+        </script>
+
+        <script>
+            const canvas = document.getElementById('motionCanvas');
+            const ctx = canvas.getContext('2d');
+
+            let waveTick = 0;
+            let particles = [];
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = document.getElementById("carousel").offsetHeight;
+                initParticles();
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            function initParticles() {
+                const count = 50;
+                particles = [];
+                for (let i = 0; i < count; i++) {
+                    particles.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        radius: Math.random() * 3 + 1,
+                        dx: (Math.random() - 0.5) * 0.5,
+                        dy: (Math.random() - 0.5) * 0.5
+                    });
+                }
+            }
+
+            function drawWave() {
+                ctx.beginPath();
+                ctx.moveTo(0, canvas.height / 2);
+                for (let x = 0; x <= canvas.width; x += 10) {
+                    const y = canvas.height / 2 + Math.sin((x + waveTick) * 0.01) * 30;
+                    ctx.lineTo(x, y);
+                }
+                ctx.strokeStyle = 'rgba(1, 67, 57, 0.2)';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+
+            function drawHalo() {
+                const centerX = canvas.width / 2;
+                const centerY = canvas.height / 2;
+                const radius = 100 + Math.sin(waveTick * 0.05) * 30;
+
+                const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, radius);
+                gradient.addColorStop(0, 'rgba(1, 67, 57, 0.15)');
+                gradient.addColorStop(1, 'rgba(1, 67, 57, 0)');
+
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+
+            function drawParticles() {
+                ctx.fillStyle = 'rgba(1, 67, 57, 0.3)';
+                for (let p of particles) {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fill();
+                    p.x += p.dx;
+                    p.y += p.dy;
+
+                    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+                    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+                }
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                drawHalo();
+                drawWave();
+                drawParticles();
+
+                waveTick++;
+                requestAnimationFrame(draw);
+            }
+
+            draw();
+        </script>
+
+
+
+        <!-- Boutons (facultatif) -->
+        <button onclick="prevSlide()"
+            class="hidden md:flex absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#014339] text-white p-2 rounded-full shadow z-10">
+            ❮
+        </button>
+        <button onclick="nextSlide()"
+            class="hidden md:flex absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#014339] text-white p-2 rounded-full shadow z-10">
+            ❯
+        </button>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-3 py-2 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-2">
+            <div class="space-y-2">
+                <!-- Section normale pour tablette et desktop -->
+                <div class="flex items-center gap-8 pt-8">
+                    <div class="flex -space-x-4">
+                        <div class="w-12 h-12 border-0">
+                            <img src="/images/airtel-money-uganda-logo-png_seeklogo-556391.png"
+                                class="rounded-full w-12 h-12" alt="">
+                        </div>
+                        <div class="w-12 h-12 rounded-full border-2 border-white bg-gray-200">
+                            <img src="/images/orange-money-logo-8F2AED308D-seeklogo.com.png"
+                                class="rounded-full w-12 h-12" alt="">
+                        </div>
+                        <div class="w-12 h-12 rounded-full border-2 border-white bg-gray-200">
+                            <img src="/images/logo (2).png" class="rounded-full w-12 h-12" alt="">
+                        </div>
+                        <div class="w-12 h-12 rounded-full border-2 border-white bg-gray-200">
+                            <img src="/images/visa (1).png" class="rounded-full w-12 h-12" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-1">+18 payment methods in the world</p>
+                    </div>
+                </div>
+
+                <!-- Bouton fixe pour mobile uniquement -->
+                <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50">
+                    <a href="https://play.google.com/store/apps/details?id=com.crespoprince.lipaMobileApp"
+                        class="block w-full text-center bg-[#014339] text-white py-4 rounded-none text-lg font-medium hover:bg-[#014339]/90 transition-all shadow-lg">
+                        Download App <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <section
+        class="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden shadow-lg cursor-pointer transform transition-transform duration-300 hover:animate-shake sticky top-0">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Unlock a World of Endless Possibilities with LIPAX.
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-12">
+                        From Virtual Cards issuing, Money Transfer, Crypto Exchange, Airtime Top Up and More — We are
+                        All in One App.
+                    </p>
+                    <a href="https://apps.lipaxe.com/auth/login"
+                        class="bg-[#014339] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#012b23] transition-all">
+                        Get Started Now
+                    </a>
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Send more, spend less.</h2>
+                    <p class="text-xl text-gray-600 mb-12">
+                        Send money from the UK, EU, US, UAE, Canada and Australia to Africa, Asia, the Caribbean and
+                        Latin America at a great rate. With fast transfers to mobile money wallets on popular networks,
+                        you can send money from your smartphone anytime.
+                    </p>
+                    <div class="flex space-x-4">
+                        <img src="images/Mastercard.webp" alt="Mastercard" class="h-20">
+                        <img src="images/visa-logo-png_seeklogo-149698.png" alt="Visa" class="h-20">
+                        <img src="images/pci-dss.png" alt="PCI DSS" class="h-20">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50 sticky top-0 z-2">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[#014339]">Our Payment Solutions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    We're here to help with any questions about our products
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-credit-card text-2xl text-[#014339]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Virtual Payments</h3>
+                    <p class="text-gray-600 mb-4 text-center">Easily manage your virtual cards</p>
+                    <a href="https://apps.lipaxe.com/auth/login"
+                        class="block mx-auto text-[#014339] font-medium hover:text-[#014339]/80 transition-colors">
+                        Learn more <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-wifi text-2xl text-[#014339]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Contactless Payments</h3>
+                    <p class="text-gray-600 mb-4 text-center">Pay instantly with NFC technology</p>
+                    <a href="https://apps.lipaxe.com/auth/login"
+                        class="block mx-auto text-[#014339] font-medium hover:text-[#014339]/80 transition-colors">
+                        Activate now <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fab fa-bitcoin text-2xl text-[#014339]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Crypto Exchange</h3>
+                    <p class="text-gray-600 mb-4 text-center">Buy and sell cryptocurrencies easily</p>
+                    <a href="https://apps.lipaxe.com/auth/login"
+                        class="block mx-auto text-[#014339] font-medium hover:text-[#014339]/80 transition-colors">
+                        Start trading <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+
+    </section>
+    <section
+        class="bg-white text-gray-800 dark:bg-gray-900 dark:text-white py-16 px-6 lg:px-24 transition-colors duration-300 sticky top-0 z-3">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            <!-- Left content -->
+            <div>
+                <p class="text-green-600 dark:text-green-400 font-medium mb-2">Trusted Worldwide</p>
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4">
+                    Trusted by over 2.7k users and 48+ Countries
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                    Our rigorous security and compliance standards are at the heart of all we do. We work tirelessly to
+                    protect you and your customers.
+                </p>
+                <div class="space-y-3 text-sm">
+                    <a href="aboutX.html"
+                        class="text-green-600 dark:text-green-400 font-medium hover:underline inline-flex items-center gap-1">
+                        Explore Legality Guide →
+                    </a><br>
+                    <a href="aboutX.html"
+                        class="text-green-600 dark:text-green-400 font-medium hover:underline inline-flex items-center gap-1">
+                        Visit the Trust Center →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right stats -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+                <!-- Stat 1 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-green-500 text-2xl sm:text-3xl">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div>
+                        <p class="text-green-700 dark:text-green-400 font-semibold text-base sm:text-lg">99.99% uptime
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">For Lipax, with zero maintenance downtime
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-blue-500 text-2xl sm:text-3xl">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                        <p class="text-blue-700 dark:text-green-400 font-semibold text-base sm:text-lg">2.7k+ Users</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Trusted by over 2700 thousands users around
+                            the world</p>
+                    </div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-yellow-500 text-2xl sm:text-3xl">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div>
+                        <p class="text-yellow-700 dark:text-green-400 font-semibold text-base sm:text-lg">48+ countries
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Have used Lipax to save his populations
+                    </div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="flex items-start gap-4">
+                    <div class="text-purple-500 text-2xl sm:text-3xl">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div>
+                        <p class="text-purple-700 dark:text-green-400 font-semibold text-base sm:text-lg">1k+</p>
+                        <p class="text-sm text-yellow-600 dark:text-yellow-400">Transactions per day</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contactless Payments Section -->
+    <section class="relative min-h-screen bg-cover bg-center sticky top-0 z-3"
+        style="background-image: url('images/slider/SLIDE4.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-70"></div>
+        <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div
+                        class="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full text-[#014339] font-medium text-sm mb-8">
+                        <i class="fas fa-bolt mr-2"></i>
+                        Contactless Payments
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">The Future of Payments is Contactless</h2>
+                    <p class="text-xl text-gray-600 mb-12">
+                        Experience seamless transactions with our advanced contactless payment solutions.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                            <div class="bg-blue-100 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                                <i class="fas fa-wifi text-xl text-[#014339]"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Tap & Pay</h3>
+                            <p class="text-gray-600">Quick payments with your phone</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                            <div class="bg-blue-100 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                                <i class="fas fa-qrcode text-xl text-[#014339]"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">QR Codes</h3>
+                            <p class="text-gray-600">Scan to pay instantly</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                            <div class="bg-blue-100 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                                <i class="fas fa-clock text-xl text-[#014339]"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Smart Devices</h3>
+                            <p class="text-gray-600">Pay with your smartwatch</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                            <div class="bg-blue-100 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                                <i class="fas fa-wallet text-xl text-[#014339]"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Digital Wallets</h3>
+                            <p class="text-gray-600">All your cards in one place</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="relative h-[500px] flex items-center justify-center">
+                        <div class="absolute w-64 h-64 bg-blue-100 rounded-full opacity-20 animate-pulse"></div>
+                        <div class="absolute w-48 h-48 bg-purple-100 rounded-full opacity-20 animate-pulse delay-150">
+                        </div>
+                        <div class="relative z-10 bg-white p-8 rounded-2xl shadow-xl floating">
+                            <i class="fas fa-mobile-alt text-5xl text-[#014339] mb-4"></i>
+                            <div class="space-y-2">
+                                <div class="w-32 h-2 bg-blue-100 rounded"></div>
+                                <div class="w-24 h-2 bg-blue-100 rounded"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                        <div class="bg-blue-100 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-wallet text-xl text-[#014339]"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">AirTime</h3>
+                        <p class="text-gray-600">Feel free to talk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Cards Section -->
+    <section class="py-20 bg-white sticky top-0 z-4">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <div
+                        class="inline-flex items-center px-4 py-2 bg-purple-50 rounded-full text-[#014339] font-medium text-sm mb-8">
+                        <i class="fas fa-credit-card mr-2"></i>
+                        Virtual Cards
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Smart Virtual Cards for Modern Business</h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Create and manage virtual cards instantly. Perfect for team expenses, subscriptions, and secure
+                        online payments.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-purple-100 p-3 rounded-xl">
+                                <i class="fas fa-check text-[#014339]"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-xl mb-2">Instant Creation</h3>
+                                <p class="text-gray-600">Generate virtual cards on demand for your business needs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-purple-100 p-3 rounded-xl">
+                                <i class="fas fa-check text-[#014339]"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-xl mb-2">Spending Controls</h3>
+                                <p class="text-gray-600">Set limits, expiry dates, and merchant categories</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-purple-100 p-3 rounded-xl">
+                                <i class="fas fa-check text-[#014339]"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-xl mb-2">Real-time Tracking</h3>
+                                <p class="text-gray-600">Monitor transactions and manage expenses in real-time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 ml-5 lg:order-3 relative">
+                    <div class="relative h-[400px]">
+                        <img src="img/newC3.png" alt="Lipax card virtual card"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105" />
+                        <!-- Card Stack -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-white relative overflow-hidden sticky top-0 z-5">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-blue-50 transform skew-x-12 -z-10"></div>
+        <div class="max-w-7xl mx-auto px-6 relative">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">How Lipax Works</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Get started with Lipax in three simple steps</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="relative group">
+                    <div class="relative h-64 mb-6 rounded-xl overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#014339]/80 to-transparent"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/register.png')] bg-cover bg-center transform group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <div
+                                class="bg-[#014339] text-white w-10 h-10 rounded-full flex items-center justify-center mb-2">
+                                <span class="text-xl font-bold">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Create Account</h3>
+                    <p class="text-gray-600">Sign up and complete your business verification in minutes</p>
+                </div>
+                <div class="relative group">
+                    <div class="relative h-64 mb-6 rounded-xl overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#014339]/80 to-transparent"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/dash.png')] bg-cover bg-center transform group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <div
+                                class="bg-[#014339] text-white w-10 h-10 rounded-full flex items-center justify-center mb-2">
+                                <span class="text-xl font-bold">2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Integrate Solution</h3>
+                    <p class="text-gray-600">Choose from our simple integration options and go live quickly</p>
+                </div>
+                <div class="relative group">
+                    <div class="relative h-64 mb-6 rounded-xl overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#014339]/80 to-transparent"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1406&q=80')] bg-cover bg-center transform group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <div
+                                class="bg-[#014339] text-white w-10 h-10 rounded-full flex items-center justify-center mb-2">
+                                <span class="text-xl font-bold">3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Accept Payments</h3>
+                    <p class="text-gray-600">Start accepting payments from customers worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <div class="sticky top-0 z-6">
+        <section class=" bg-[#014339] py-20 bg-white z-6">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[#014339]">Why Choose Lipax</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                        Experience the future of payments — fast, secure, and effortlessly connected.
+                    </p>
+                </div>
+                <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow group">
+                        <div
+                            class="w-12 h-12 bg-[#014339]/10 rounded-lg flex items-center justify-center mb-4 text-[#014339]">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Secure Payments</h3>
+                        <p class="text-gray-600">Bank-grade security with 2FA and encryption</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow group">
+                        <div
+                            class="w-12 h-12 bg-[#014339]/10 rounded-lg flex items-center justify-center mb-4 text-[#014339]">
+                            <i class="fas fa-bolt text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Lightning Fast</h3>
+                        <p class="text-gray-600">Process payments in milliseconds</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow group">
+                        <div
+                            class="w-12 h-12 bg-[#014339]/10 rounded-lg flex items-center justify-center mb-4 text-[#014339]">
+                            <i class="fas fa-headset text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+                        <p class="text-gray-600">Round-the-clock expert assistance</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow group">
+                        <div
+                            class="w-12 h-12 bg-[#014339]/10 rounded-lg flex items-center justify-center mb-4 text-[#014339]">
+                            <i class="fas fa-chart-line text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Analytics</h3>
+                        <p class="text-gray-600">Detailed insights and reporting</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Testimonials Section -->
+        <section class="py-20 bg-blue-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">See what others are saying</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">Trusted by thousands of businesses worldwide</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full overflow-hidden mr-4 bg-gray-200">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Sarah Johnson</h4>
+                                <p class="text-gray-500">Paris</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-600 italic">"Lipax has transformed how we handle payments. The integration
+                            was
+                            seamless, and the support team is exceptional."</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full overflow-hidden mr-4 bg-gray-200">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Michael Chen</h4>
+                                <p class="text-gray-500">CTO, USA</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-600 italic">"The analytics and reporting features have given us invaluable
+                            insights into our business operations."</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full overflow-hidden mr-4 bg-gray-200">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Williams"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Emma Williams</h4>
+                                <p class="text-gray-500">Los angels</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-600 italic">"Best payment solution we've used. The global payment options
+                            have
+                            helped us expand internationally."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="">
+        <section class="py-20 bg-[#014339] text-white z-7 relative">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+                <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                    Join thousands of businesses that trust Lipax for their payment needs
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="https://apps.lipaxe.com/auth/login"
+                        class="bg-white text-[#014339] px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105">
+                        Create Account
+                    </a>
+                    <a href="sales.html"
+                        class="border border-white px-8 py-3 rounded-lg font-medium hover:bg-[#014339]/80 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105">
+                        Contact Sales
+                    </a>
+                </div>
+                <div class="text-center mb-8 mt-5">
+        <h1 class="text-3xl font-bold">Avis des <span class="text-green-500">clients</span></h1>
+        <p class="text-gray-600 mt-2">Pourquoi nous font-ils confiance ? Lisez ce que nos clients disent sur sendaval...</p>
+        <div class="mt-4">
+            <span class="text-yellow-500 text-2xl">★★★★★</span>
+            <span class="text-gray-500">(4.63 en moyenne)</span>
+            <span class="text-gray-500">5174 avis</span>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+        <div class="bg-white p-4 shadow rounded-lg">
+            <h2 class="font-bold text-gray-600">Philippe Pierre</h2>
+            <div class="flex items-center">
+                <i class="fas fa-thumbs-up text-green-700 mr-2"></i>
+                <span class="text-yellow-500">★★★★★</span>
+            </div>
+            <p class="text-gray-600">Client vérifié<br>transfert parfait</p>
+            <p class="text-gray-500">Laos, 10-2023</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg">
+            <h2 class="font-bold text-gray-600">García, Martha...</h2>
+            <div class="flex items-center">
+                <i class="fas fa-thumbs-up text-green-700 mr-2"></i>
+                <span class="text-yellow-500">★★★★★</span>
+            </div>
+            <p class="text-gray-600">Client vérifié<br>Excité de voir des recharges ici ! Merci pour votre service rapide et efficace !</p>
+            <p class="text-gray-500">Acapulco de Juárez, Mexique, 10-2023</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg">
+            <h2 class="font-bold text-gray-600">Anonyme</h2>
+            <div class="flex items-center">
+                <i class="fas fa-thumbs-up text-green-700 mr-2"></i>
+                <span class="text-yellow-500">★★★★☆</span>
+            </div>
+            <p class="text-gray-600">Client vérifié<br>Super service</p>
+            <p class="text-gray-500">Inconnu, 10-2023</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg">
+            <h2 class="font-bold text-gray-600">Jorgia Nahim</h2>
+            <div class="flex items-center">
+                <i class="fas fa-thumbs-up text-green-700 mr-2"></i>
+                <span class="text-yellow-500">★★★☆☆</span>
+            </div>
+            <p class="text-gray-600">Client vérifié<br>bon mais limité</p>
+            <p class="text-gray-500">Beyrouth, Liban, 10-2023</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg">
+            <h2 class="font-bold text-gray-600">Martin Dupont</h2>
+            <div class="flex items-center">
+                <i class="fas fa-thumbs-up text-green-700 mr-2"></i>
+                <span class="text-yellow-500">★★★★★</span>
+            </div>
+            <p class="text-gray-600">Client vérifié<br>Service exceptionnel !</p>
+            <p class="text-gray-500">Paris, France, 10-2023</p>
+        </div>
+    </div>
+            </div>
+        </section>
+        <section class="py-20 text-white z-7 relative backdrop-blur-sm bg-white/5">
+            <div class="container mx-auto px-4 py-16 max-w-4xl">
+                <div class="text-center mb-16">
+                    <span
+                        class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-medium mb-4 text-sm uppercase tracking-wider">
+                        FAQ
+                    </span>
+                    <h1 class="text-4xl md:text-5xl font-bold text-primary-900 mb-4 font-display">
+                        Frequently Asked Questions
+                    </h1>
+                    <p class="text-lg text-primary-700 max-w-2xl mx-auto leading-relaxed">
+                        Find quick answers to the most common questions.
+                    </p>
+
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item border-b border-primary-100" x-data="{ open: false }">
+                        <button @click="open = !open"
+                            class="w-full px-6 py-5 md:px-8 md:py-6 text-left flex justify-between items-center focus:outline-none"
+                            :class="{ 'active': open }">
+                            <div class="flex items-center">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-question text-primary-600"></i>
+                                </div>
+                                <h3 class="text-lg md:text-xl font-semibold text-primary-900">How do I create an account
+                                    on your platform?</h3>
+                            </div>
+                            <i class="fas fa-chevron-down text-primary-500 transition-transform duration-300"
+                                :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <div x-show="open" x-collapse class="accordion-content px-6 md:px-8 pb-6 md:pb-8"
+                            style="--accordion-height: auto;">
+                            <div class="pl-14 text-primary-700">
+                                <p class="mb-4">Creating an account is quick and easy:</p>
+                                <ol class="list-decimal pl-5 space-y-2">
+                                    <li>Click the "Sign Up" button at the top right</li>
+                                    <li>Fill out the form with your information</li>
+                                    <li>Confirm your email address via the received link</li>
+                                    <li>Log in with your credentials</li>
+                                </ol>
+                                <p class="mt-4 text-sm text-primary-500">The whole process takes less than 2 minutes!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item border-b border-primary-100" x-data="{ open: false }">
+                        <button @click="open = !open"
+                            class="w-full px-6 py-5 md:px-8 md:py-6 text-left flex justify-between items-center focus:outline-none"
+                            :class="{ 'active': open }">
+                            <div class="flex items-center">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-credit-card text-primary-600"></i>
+                                </div>
+                                <h3 class="text-lg md:text-xl font-semibold text-primary-900">What payment methods do
+                                    you accept?</h3>
+                            </div>
+                            <i class="fas fa-chevron-down text-primary-500 transition-transform duration-300"
+                                :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <div x-show="open" x-collapse class="accordion-content px-6 md:px-8 pb-6 md:pb-8"
+                            style="--accordion-height: auto;">
+                            <div class="pl-14 text-primary-700">
+                                <p class="mb-4">We accept several secure payment methods:</p>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fab fa-cc-visa text-2xl text-blue-900"></i>
+                                        <span class="text-sm">Visa</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fab fa-cc-mastercard text-2xl text-red-900"></i>
+                                        <span class="text-sm">Mastercard</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fab fa-cc-paypal text-2xl text-blue-500"></i>
+                                        <span class="text-sm">PayPal</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-university text-2xl text-primary-600"></i>
+                                        <span class="text-sm">Bank Transfer</span>
+                                    </div>
+                                </div>
+                                <p class="mt-4 text-sm text-primary-500">All payments are encrypted and secure.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item border-b border-primary-100" x-data="{ open: false }">
+                        <button @click="open = !open"
+                            class="w-full px-6 py-5 md:px-8 md:py-6 text-left flex justify-between items-center focus:outline-none"
+                            :class="{ 'active': open }">
+                            <div class="flex items-center">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-truck text-primary-600"></i>
+                                </div>
+                                <h3 class="text-lg md:text-xl font-semibold text-primary-900">What are your delivery
+                                    times?</h3>
+                            </div>
+                            <i class="fas fa-chevron-down text-primary-500 transition-transform duration-300"
+                                :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <div x-show="open" x-collapse class="accordion-content px-6 md:px-8 pb-6 md:pb-8"
+                            style="--accordion-height: auto;">
+                            <div class="pl-14 text-primary-700">
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-primary-200">
+                                        <thead class="bg-primary-50">
+                                            <tr>
+                                                <th
+                                                    class="px-4 py-3 text-left text-xs font-medium text-primary-700 uppercase tracking-wider">
+                                                    Method</th>
+                                                <th
+                                                    class="px-4 py-3 text-left text-xs font-medium text-primary-700 uppercase tracking-wider">
+                                                    Time</th>
+                                                <th
+                                                    class="px-4 py-3 text-left text-xs font-medium text-primary-700 uppercase tracking-wider">
+                                                    Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-white divide-y divide-primary-200">
+                                            <tr>
+                                                <td
+                                                    class="px-4 py-3 whitespace-nowrap text-sm font-medium text-primary-900">
+                                                    Standard</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-primary-600">3-5
+                                                    days</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-primary-600">Free
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-4 py-3 whitespace-nowrap text-sm font-medium text-primary-900">
+                                                    Express</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-primary-600">1-2
+                                                    days</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-primary-600">€9.99
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-4 py-3 whitespace-nowrap text-sm font-medium text-primary-900">
+                                                    Premium</td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-primary-600">24h
+                                                </td>
+                                                <td class="px-4 py-3 whitespace-nowrap text-sm text-primary-600">€19.99
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="mt-4 text-sm text-primary-500">Delivery times are estimated from the order
+                                    confirmation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item: How to verify KYC on Lipax -->
+                    <div class="faq-item border-b border-primary-100" x-data="{ open: false }">
+                        <button @click="open = !open"
+                            class="w-full px-6 py-5 md:px-8 md:py-6 text-left flex justify-between items-center focus:outline-none"
+                            :class="{ 'active': open }">
+                            <div class="flex items-center">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-id-card text-primary-600"></i>
+                                </div>
+                                <h3 class="text-lg md:text-xl font-semibold text-primary-900">How to verify KYC on
+                                    Lipax?</h3>
+                            </div>
+                            <i class="fas fa-chevron-down text-primary-500 transition-transform duration-300"
+                                :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <div x-show="open" x-collapse class="accordion-content px-6 md:px-8 pb-6 md:pb-8"
+                            style="--accordion-height: auto;">
+                            <div class="pl-14 text-primary-700">
+                                <p class="mb-4">To verify your identity (KYC) on Lipax, please follow these steps:</p>
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li>Log into your Lipax account</li>
+                                    <li>Go to the “Settings” or “Account Verification” section</li>
+                                    <li>Fill in your personal details (full name, address, etc.)</li>
+                                    <li>Upload a valid government-issued ID (passport, national ID, etc.)</li>
+                                    <li>Submit a selfie for identity confirmation if requested</li>
+                                    <li>Wait for the review – usually completed within 24-48 hours</li>
+                                </ul>
+                                <div class="mt-4 p-4 bg-primary-50 rounded-lg">
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="fas fa-info-circle text-primary-500"></i>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-sm text-primary-700">
+                                                Make sure all documents are clear and not expired. You will be notified
+                                                once your KYC is approved.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item" x-data="{ open: false }" id="option1">
+                        <button @click="open = !open"
+                            class="w-full px-6 py-5 md:px-8 md:py-6 text-left flex justify-between items-center focus:outline-none"
+                            :class="{ 'active': open }">
+                            <div class="flex items-center">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-headset text-primary-600"></i>
+                                </div>
+                                <h3 class="text-lg md:text-xl font-semibold text-primary-900">How can I contact your
+                                    customer service?</h3>
+                            </div>
+                            <i class="fas fa-chevron-down text-primary-500 transition-transform duration-300"
+                                :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <div x-show="open" x-collapse class="accordion-content px-6 md:px-8 pb-6 md:pb-8"
+                            style="--accordion-height: auto;">
+                            <div class="pl-14 text-primary-700">
+                                <p class="mb-4">You can reach our customer support team through the following methods:
+                                </p>
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li>Live chat on our website (24/7)</li>
+                                    <li>Email: support@lipaxe.com</li>
+                                    <li>Phone: +33665248357</li>
+                                </ul>
+                                <p class="mt-4 text-sm text-primary-500">We are here to help you with any questions or
+                                    issues.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 text-center">
+                        <div class="inline-flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <button
+                                class="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors duration-300 flex items-center justify-center">
+                                <i class="fas fa-question-circle mr-2"></i>
+                                <span>Ask a query</span>
+                            </button>
+                            <a href="https://wa.me/243997244648?text=Hello%2C%20I%20would%20like%20to%20get%20more%20information%20please."
+                                target="_blank" rel="noopener noreferrer">
+                                <button
+                                    class="px-6 py-3 border border-primary-600 text-primary-600 hover:bg-primary-50 font-medium rounded-lg transition-colors duration-300 flex items-center justify-center">
+                                    <i class="fas fa-comments mr-2"></i>
+                                    <span>Chat</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    
+    <footer class="bg-gray-900 text-white py-20 z-50 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                            <img src="/img/LOGOCOl.png" width="20" height="10" class="w-full">
+                        </div>
+                        <span class="text-xl font-bold">LIPAX</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Simplifying payments for modern businesses with secure and reliable solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61570620521422"
+                            class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://cd.linkedin.com/company/lipax?trk=public_post_feed-actor-image"
+                            class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61570620521422"
+                            class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://apps.lipaxe.com/auth/login"
+                                class="text-gray-400 hover:text-white transition">Online Payments</a></li>
+                        <li><a href="https://apps.lipaxe.com/auth/login"
+                                class="text-gray-400 hover:text-white transition">In-person Payments</a></li>
+                        <li><a href="https://apps.lipaxe.com/auth/login"
+                                class="text-gray-400 hover:text-white transition">Virtual Cards</a></li>
+                        <li><a href="https://apps.lipaxe.com/auth/login"
+                                class="text-gray-400 hover:text-white transition">International Transfers</a>
+                        </li>
+                        <li><a href="https://apps.lipaxe.com/auth/login"
+                                class="text-gray-400 hover:text-white transition">Crypto Exchange</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Documentation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">API Reference</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#option1" class="text-gray-400 hover:text-white transition">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="aboutX.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Press</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Partners</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="mt-6 text-gray-400">
+                Lipax is a financial technology company, not a bank. We collaborate with partner banks that hold
+                valid banking licenses to provide essential banking services. The debit cards we offer are issued by
+                these partner banks under licenses from Visa and MasterCard, enabling you to use them at any location
+                that accepts Visa and MasterCard debit cards. Additionally, our platform allows you to easily transfer
+                money, enhancing your financial flexibility.
+            </p>
+
+            <p class="mt-6 text-gray-400">
+                Lipax is regulated and authorized to conduct money transmission in multiple countries
+                around the world. See here for information on how Lipax is regulated in each country that it operates
+                in.
+            </p>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Lipax. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="Terms.html" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.card-rotate');
+
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    cards.forEach(c => {
+                        if (c !== card) {
+                            c.style.transform = 'rotate(0deg) translateY(0)';
+                        }
+                    });
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    cards.forEach((c, index) => {
+                        if (index === 0) {
+                            c.style.transform = 'rotate(-15deg) translateX(8px) translateY(8px)';
+                        } else if (index === 1) {
+                            c.style.transform = 'rotate(-5deg) translateX(4px) translateY(4px)';
+                        } else {
+                            c.style.transform = 'rotate(5deg)';
+                        }
+                    });
+                });
+            });
+        });
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#014339',
+                            700: '#0369a1',
+                            800: '#014339',
+                            900: '#014339',
+                        },
+                        secondary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'accordion-open': 'accordion-open 0.3s ease-out',
+                        'accordion-close': 'accordion-close 0.3s ease-out'
+                    },
+                    keyframes: {
+                        'accordion-open': {
+                            '0%': { height: '0', opacity: '0' },
+                            '100%': { height: 'var(--accordion-height)', opacity: '1' }
+                        },
+                        'accordion-close': {
+                            '0%': { height: 'var(--accordion-height)', opacity: '1' },
+                            '100%': { height: '0', opacity: '0' }
+                        }
+                    }
+                }
+            }
         }
-        showError(error) {
-          document.querySelector(".unhide-if-errors").style.display = "block";
-          document.querySelector('.put-errors-here').textContent = error;
+        module.exports = {
+            theme: {
+                extend: {
+                    animation: {
+                        shake: 'shake 0.5s ease-in-out',
+                    },
+                    keyframes: {
+                        shake: {
+                            '0%, 100%': { transform: 'translateX(0)' },
+                            '25%': { transform: 'translateX(-5px)' },
+                            '50%': { transform: 'translateX(5px)' },
+                            '75%': { transform: 'translateX(-5px)' },
+                        },
+                    },
+                },
+            },
+            plugins: [],
         }
-        static instance() {
-          if (!this._instance) {
-            this._instance = new this();
-          }
-          return this._instance;
-        }
-      }
-      document.addEventListener("DOMContentLoaded", function(event) {
-        MyDocumentation.init();
-      });
+
     </script>
-  </body>
+
+</body>
+
 </html>

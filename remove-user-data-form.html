@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de suppression - Lipax</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- En-tête -->
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-indigo-700 mb-2">Lipax</h1>
+            <h2 class="text-2xl font-semibold text-gray-800">Demande de suppression de données</h2>
+        </header>
+
+        <!-- Contenu principal -->
+        <main class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
+            <!-- Introduction -->
+            <section class="mb-8">
+                <p class="text-gray-600 mb-4">
+                    Nous respectons votre droit à la vie privée. Vous pouvez demander la suppression de vos données personnelles ou de votre compte Lipax en remplissant ce formulaire.
+                </p>
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-exclamation-circle text-yellow-400 mt-1"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm text-yellow-700">
+                                <strong>Note importante :</strong> La suppression de votre compte est irréversible. Toutes vos données seront définitivement supprimées et vous ne pourrez plus accéder à votre compte Lipax.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formulaire -->
+            <form id="deletionForm" class="space-y-6">
+                <!-- Type de demande -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Type de demande *</label>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <input id="delete-account" name="requestType" type="radio" value="account" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500" checked>
+                            <label for="delete-account" class="ml-3 block text-sm font-medium text-gray-700">
+                                Suppression complète du compte (toutes les données)
+                            </label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="delete-data" name="requestType" type="radio" value="data" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                            <label for="delete-data" class="ml-3 block text-sm font-medium text-gray-700">
+                                Suppression des données personnelles uniquement (le compte reste actif)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Adresse email associée au compte *</label>
+                    <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <!-- Motif -->
+                <div>
+                    <label for="reason" class="block text-sm font-medium text-gray-700">Raison de votre demande (facultatif)</label>
+                    <select id="reason" name="reason" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 rounded-md">
+                        <option value="">Sélectionnez une raison...</option>
+                        <option value="privacy">Préoccupations concernant la vie privée</option>
+                        <option value="no-use">Je n'utilise plus le service</option>
+                        <option value="service">Problème avec le service</option>
+                        <option value="other">Autre raison</option>
+                    </select>
+                </div>
+
+                <!-- Commentaire -->
+                <div>
+                    <label for="comments" class="block text-sm font-medium text-gray-700">Commentaires supplémentaires (facultatif)</label>
+                    <textarea id="comments" name="comments" rows="3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                </div>
+
+                <!-- Confirmation -->
+                <div class="flex items-start">
+                    <div class="flex items-center h-5">
+                        <input id="confirmation" name="confirmation" type="checkbox" required class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                    </div>
+                    <div class="ml-3 text-sm">
+                        <label for="confirmation" class="font-medium text-gray-700">Je confirme que je souhaite procéder à cette demande de suppression *</label>
+                        <p class="text-gray-500">En cochant cette case, vous reconnaissez que cette action est irréversible et que toutes les données sélectionnées seront définitivement supprimées.</p>
+                    </div>
+                </div>
+
+                <!-- Bouton de soumission -->
+                <div class="pt-4">
+                    <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                        Envoyer la demande de suppression
+                    </button>
+                </div>
+            </form>
+
+            <!-- Confirmation après soumission (cachée initialement) -->
+            <div id="confirmationMessage" class="hidden p-4 mt-6 bg-green-50 rounded-md">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                    </div>
+                    <div class="ml-3">
+                        <h3 class="text-sm font-medium text-green-800">Demande reçue</h3>
+                        <div class="mt-2 text-sm text-green-700">
+                            <p>
+                                Nous avons bien reçu votre demande de suppression. Notre équipe va la traiter dans les plus brefs délais.
+                            </p>
+                            <p class="mt-2">
+                                Vous recevrez un email de confirmation une fois la suppression effectuée.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Pied de page -->
+        <footer class="mt-12 text-center text-sm text-gray-500">
+            <p id="copyright"></p>
+
+            <p class="mt-1">
+                <a href="#" class="text-indigo-600 hover:text-indigo-800">Politique de confidentialité</a> | 
+                <a href="#" class="text-indigo-600 hover:text-indigo-800">Conditions d'utilisation</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Insérer automatiquement l'année en cours
+        const currentYear = new Date().getFullYear();
+        document.getElementById("copyright").innerHTML = `© ${currentYear} Lipax. Tous droits réservés.`;
+    </script>
+    
+
+    <!-- Script pour gérer la soumission du formulaire -->
+    <script>
+        document.getElementById('deletionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('deletionForm').classList.add('hidden');
+
+            document.getElementById('confirmationMessage').classList.remove('hidden');
+
+        });
+    </script>
+</body>
+</html>
